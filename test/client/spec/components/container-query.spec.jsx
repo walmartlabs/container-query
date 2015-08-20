@@ -2,39 +2,33 @@
  * Client tests
  */
 import React from "react/addons";
-import Component from "src/components/container-query";
+import ContainerQuery from "src/components/container-query";
 
 // Use `TestUtils` to inject into DOM, simulate events, etc.
 // See: https://facebook.github.io/react/docs/test-utils.html
 const TestUtils = React.addons.TestUtils;
 
 describe("components/container-query", function () {
+  let component;
+  let container;
 
-  it("has expected content with deep render", function () {
-    // This is a "deep" render that renders children + all into an actual
-    // browser DOM node.
-    //
-    // https://facebook.github.io/react/docs/test-utils.html#renderintodocument
-    const rendered = TestUtils.renderIntoDocument(<Component />);
-
-    // This is a real DOM node to assert on.
-    const divNode = TestUtils
-      .findRenderedDOMComponentWithTag(rendered, "div")
-      .getDOMNode();
-
-    // expect(divNode).to.have.property("innerHTML", "Edit me!");
+  beforeEach(function () {
+    container = document.createElement("div");
+    component = React.render(
+      <ContainerQuery breakpoints={{small: 0, medium: 200, large: 400}}>
+        <div
+          className-small="book col-12"
+          className-medium="book col-6"
+          className-large="book col-3"
+        >
+          Hello.
+        </div>
+      </ContainerQuery>,
+      container
+    );
   });
 
-  it("has expected content with shallow render", function () {
-    // This is a "shallow" render that renders only the current component
-    // without using the actual DOM.
-    //
-    // https://facebook.github.io/react/docs/test-utils.html#shallow-rendering
-    const renderer = TestUtils.createRenderer();
-    renderer.render(<Component />);
-    const output = renderer.getRenderOutput();
-
-    // expect(output.type).to.equal("div");
-    // expect(output.props.children).to.contain("Edit me");
+  it("should render into the document", function () {
+    expect(component).to.not.be.false;
   });
 });
