@@ -31,6 +31,7 @@ module.exports = function (config) {
       "test/client/main.js"
     ],
     webpack: webpackCfg,
+    browsers: ["PhantomJS"],
     webpackServer: {
       port: 3002, // Choose a non-conflicting port (3000 app, 3001 test dev)
       quiet: false,
