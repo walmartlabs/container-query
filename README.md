@@ -17,7 +17,7 @@ Introducing, `ContainerQuery`, where you can define breakpoint names on a contai
 and then apply `style`, `props` or `className` depending on the current width of the
 container. For example:
 
-```
+```jsx
 <ContainerQuery breakpoints={{small: 0, medium: 200, large: 400}}>
   <Book
     className-small="book col-12"
@@ -41,7 +41,7 @@ based on that value.
 
 You can also set styles:
 
-```
+```jsx
 <ContainerQuery
   breakpoints={{small: 0, medium: 200, large: 400}}>
   <Book
@@ -64,7 +64,7 @@ as defined by the `breakpoints` object.
 
 You can also set properties:
 
-```
+```jsx
 <ContainerQuery
   breakpoints={{small: 0, medium: 200, large: 400}}>
   <Book
@@ -84,7 +84,7 @@ You are also free to name the breakpoints however you choose.
 
 For something even easier you can use a columns-based helper class like so:
 
-```
+```jsx
 <ContainerQuery.Columns
   breakpoints={{small: 0, medium: 250, large: 425}}
   at-small={1} at-medium={2} at-large={4}>
