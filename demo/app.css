@@ -1,0 +1,43 @@
+body {
+  font-family: arial, verdana, sans-serif;
+  margin: 2em;
+}
+
+h4 {
+  border-bottom: 2px solid black;
+}
+
+.main .left {
+  float: left;
+  width: 500px;
+}
+
+.main .right {
+  float: left;
+  width: 150px;
+}
+
+.book {
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  padding: 0.5em;
+}
+
+.book .image img {
+  width: 100px;
+}
+
+.book .title {
+  font-size: xx-small;
+}
+
+.col-12 {
+  width: 90%;
+}
+.col-6 {
+  width: 50%;
+}
+.col-3 {
+  width: 25%;
+}
