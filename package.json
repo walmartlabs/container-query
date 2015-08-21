@@ -41,7 +41,7 @@
     "test-frontend-ci": "node node_modules/karma/bin/karma start --browsers PhantomJS,Firefox karma.conf.coverage.js",
     "test-frontend-cov": "node node_modules/karma/bin/karma start karma.conf.coverage.js",
     "test-frontend-dev": "node node_modules/karma/bin/karma start karma.conf.dev.js",
-    "test": "npm run test-frontend && echo 'TODO Server 13, Integration 12 tests.'",
+    "test": "npm run test-frontend",
     "test-ci": "npm run test-frontend-ci",
     "test-cov": "npm run test-frontend-cov",
     "test-dev": "npm run test-frontend-dev",

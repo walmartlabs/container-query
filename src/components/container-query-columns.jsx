@@ -17,7 +17,7 @@ export default class ContainerQueryColumns extends React.Component {
       }
     }
     return (
-      <ContainerQuery {... this.props}>
+      <ContainerQuery {... this.props} ref="container">
         {React.Children.map(this.props.children, (child, index) => {
           childProps.key = index;
           return cloneElement(child, childProps);
