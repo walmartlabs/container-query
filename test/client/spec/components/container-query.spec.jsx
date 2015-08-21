@@ -1,11 +1,7 @@
-/**
- * Client tests
- */
+/* eslint no-undef:0, no-unused-expressions:0, prefer-const:0 */
 import React from "react/addons";
 import ContainerQuery from "src/components/container-query";
 
-// Use `TestUtils` to inject into DOM, simulate events, etc.
-// See: https://facebook.github.io/react/docs/test-utils.html
 const TestUtils = React.addons.TestUtils;
 
 describe("components/container-query", function () {
